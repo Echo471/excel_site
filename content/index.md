@@ -11,12 +11,12 @@ title: Excel 学习笔记库 | 从入门到精通的实用技巧
 ### 🚀 快捷导航
 
 #### 函数与公式
-- [[xlookup-cross-sheet-lookup|XLOOKUP 跨表找人：财务人的安全救赎]] - 掌握跨表数据查找的高效方法
-- [[excel-vlookup-multiple-criteria-lookup|Excel VLOOKUP 多条件查找匹配实战：从财务退票到终极安全公式]] - 多条件查找的实战技巧
+- [[excel-id-card-age-gender-calculation|Excel 身份证号自动计算年龄与性别]]
+- [[excel-vlookup-multiple-criteria-lookup|Excel VLOOKUP 多条件找人]]
 
 #### 数据处理
-- [[excel-phone-number-masking|Excel 隐藏手机号中间四位星号显示]] - 保护隐私的实用技巧
-- [[excel-id-card-age-gender-calculation|Excel 身份证号自动计算年龄与性别]] - 从身份证号提取关键信息
+- [[xlookup-cross-sheet-lookup|XLOOKUP 跨表找人]]
+- [[excel-phone-number-masking|Excel 手机号脱敏处理]]
 
 ### 📁 内容分类
 
