@@ -10,7 +10,7 @@ const config: QuartzConfig = {
   configuration: {
     pageTitle: "Excel 从入门到精通",
     pageTitleSuffix: "",
-    enableSPA: true,
+    enableSPA: false,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
