@@ -16,7 +16,7 @@ const config: QuartzConfig = {
       provider: "plausible",
     },
     locale: "zh-CN", // 已改为中文
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "excel-site-eta.vercel.app",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
