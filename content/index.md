@@ -1,39 +1,33 @@
 ---
-title: Excel 学习笔记库 | 从入门到精通的实用技巧
+title: Excel 实战手册 | 打造你的数字办公大脑
 ---
 
-# 📊 Excel 学习笔记库
+# 📊 Excel 实战知识库
 
-## 🌟 欢迎来到我的 Excel 技巧宝库
+> **“拒绝低效加班，让数据为你工作。”**  
+> 这里不是枯燥的说明书，而是解决具体办公痛点的实战指南。
 
-这里收录了我精心整理的 Excel 实用技巧，从基础操作到高级函数，涵盖日常工作中常见的各种场景。无论是数据处理、公式计算还是数据分析，你都能在这里找到有价值的参考。
+---
 
-### 🚀 快捷导航
+### 🗺️ 核心知识地图
 
-#### 函数与公式
-- [[excel-id-card-age-gender-calculation|Excel 身份证号自动计算年龄与性别]]
-- [[excel-vlookup-multiple-criteria-lookup|Excel VLOOKUP 多条件找人]]
+> [!abstract] 函数精粹 (Functions)
+> 涵盖最强大的查找、逻辑与文本函数。
+> - [[excel-vlookup-multiple-criteria-lookup|VLOOKUP 多条件进阶]] · [[xlookup-cross-sheet-lookup|XLOOKUP 跨表找人]] · [[excel-phone-number-masking|LET 现代逻辑重构]]
 
-#### 数据处理
-- [[xlookup-cross-sheet-lookup|XLOOKUP 跨表找人]]
-- [[excel-phone-number-masking|Excel 手机号脱敏处理]]
+> [!info] 业务实战 (Business Case)
+> 解决财务、HR、数据分析中的真实需求。
+> - [[excel-id-card-age-gender-calculation|身份证自动分析]] · [[excel-phone-number-masking|敏感数据脱敏]]
 
-### 📁 内容分类
+> [!tip] 效率黑科技 (Efficiency)
+> 提升 10 倍操作速度的小技巧。
+> - 快捷键合集 · 数据透视表 · 动态数组
 
-| 类别 | 内容 |
-|------|------|
-| 函数公式 | XLOOKUP、VLOOKUP 等函数的高级应用 |
-| 数据处理 | 数据清洗、格式化和转换技巧 |
-| 数据分析 | 数据透视表、图表制作等分析工具 |
-| 效率提升 | 快捷键、批量操作等效率技巧 |
+---
 
-### 💡 学习建议
+### 🔍 快速上手
+1. **全文搜索**：按下 <kbd>Ctrl</kbd> + <kbd>K</kbd> 输入关键词（如“提取”、“核对”）。
+2. **关系图谱**：点击右上角节点图标，查看函数之间的关联逻辑。
+3. **按图索骥**：通过左侧 **Explorer** 目录直接浏览分类文件夹。
 
-1. **从基础开始**：先掌握常用函数和基本操作
-2. **实践应用**：通过实际案例巩固所学知识
-3. **持续积累**：定期回顾和更新笔记
-4. **分享交流**：与他人分享你的学习心得
-
-### 📅 最近更新
-
-- 2026-04-24 - 建立笔记库框架
+---
