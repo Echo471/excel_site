@@ -5,11 +5,23 @@ import * as Component from "./quartz/components"
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    // 【新增】自动在首页正文下方显示最近更新列表，无需手动编辑 index.md
+    Component.ConditionalRender({
+      condition: (page) => page.fileData.slug === "index",
+      component: Component.RecentNotes({
+        title: "📢 最近发布的 Excel 教程",
+        limit: 5,
+        showTags: true,
+        linkToMore: "tags/", // 点击标题可以跳转到标签页查看更多
+        filter: (f) => f.slug !== "index", // 过滤掉首页自己
+      }),
+    }),
+  ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/Echo471/excel_site",
+      "Excel 实战手册": "https://excel-site-eta.vercel.app",
     },
   }),
 }
@@ -44,6 +56,14 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+    // 【新增】在右侧边栏也显示最近更新，方便快速跳转
+    Component.DesktopOnly(
+      Component.RecentNotes({
+        title: "近期更新",
+        limit: 3,
+        filter: (f) => f.slug !== "index",
+      }),
+    ),
   ],
 }
 
