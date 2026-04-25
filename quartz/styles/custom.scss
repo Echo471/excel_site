@@ -1,3 +1,127 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+// --- Excel 知识库专属 UI 优化 ---
+
+// 1. 全局配色与字体微调
+:root {
+  --excel-green: #217346;
+  --excel-light-green: rgba(33, 115, 70, 0.1);
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --card-hover-shadow: 0 8px 24px rgba(33, 115, 70, 0.15);
+}
+
+// 2. 主页标题美化
+.p-index h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(120deg, var(--excel-green), #144d2f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+// 3. 将 Callouts 转化为现代卡片布局
+.callout {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  background-color: #ffffff;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-hover-shadow);
+    border-color: var(--excel-green);
+  }
+
+  // 隐藏 Callout 的默认图标背景，改为更清爽的样式
+  .callout-title {
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--excel-green);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #eee;
+    margin-bottom: 0.8rem;
+    
+    .callout-icon {
+      color: var(--excel-green);
+    }
+  }
+
+  // 让卡片内的列表更紧凑
+  .callout-content {
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      
+      li {
+        margin-bottom: 0.4rem;
+        font-size: 0.95rem;
+        
+        &::before {
+          content: "→";
+          margin-right: 8px;
+          color: var(--excel-green);
+          font-weight: bold;
+        }
+
+        a {
+          text-decoration: none;
+          color: var(--darkgray);
+          &:hover {
+            color: var(--excel-green);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 4. “快速上手” 区域美化
+kbd {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+  color: #333;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+// 5. 自动生成的“最近更新”列表美化
+.recent-notes {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  background: var(--excel-light-green);
+  border-radius: 16px;
+
+  h3 {
+    color: var(--excel-green);
+    font-weight: 800;
+    margin-top: 0;
+  }
+
+  .recent-posts li {
+    background: white;
+    margin-bottom: 0.8rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--excel-green);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.02);
+    
+    a {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+  }
+}
