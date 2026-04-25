@@ -125,3 +125,140 @@ kbd {
     }
   }
 }
+// --- 文章详情页渲染优化 ---
+
+article {
+  // 1. 标题层级美化
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-top: 1.5rem;
+    color: var(--excel-green);
+    border-bottom: 2px solid var(--excel-light-green);
+    padding-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    padding-left: 0.8rem;
+    border-left: 5px solid var(--excel-green);
+    background: linear-gradient(to right, var(--excel-light-green), transparent);
+    line-height: 1.8;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin-top: 1.5rem;
+    &::before {
+      content: "⚓";
+      margin-right: 8px;
+      font-size: 1rem;
+      opacity: 0.5;
+    }
+  }
+
+  // 2. 正文间距与行高
+  p {
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+    color: #374151; // 稍微深灰一点，比纯黑更护眼
+  }
+
+  // 3. 超级重要的：Excel 公式/代码块美化
+  // 让代码块看起来像 Excel 的公式栏
+  pre {
+    background-color: #f8f9fa !important;
+    border: 1px solid #e5e7eb !important;
+    border-left: 4px solid var(--excel-green) !important;
+    border-radius: 8px !important;
+    padding: 1.2rem !important;
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+
+    code {
+      font-family: 'Fira Code', 'Cascadia Code', Consolas, monospace;
+      font-size: 0.95rem;
+      color: #1f2937;
+    }
+
+    // 模拟公式栏的 "fx" 图标
+    &::before {
+      content: "fx";
+      position: absolute;
+      top: 0.2rem;
+      left: 0.5rem;
+      font-family: serif;
+      font-style: italic;
+      color: var(--excel-green);
+      font-weight: bold;
+      opacity: 0.4;
+      font-size: 0.8rem;
+    }
+  }
+
+  // 行内小代码 `SUM()`
+  code:not(pre code) {
+    background-color: var(--excel-light-green);
+    color: var(--excel-green);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9em;
+  }
+
+  // 4. 表格美化 (Excel 网站的灵魂)
+  table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 1.5rem 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+
+    th {
+      background-color: var(--excel-green);
+      color: white;
+      font-weight: 600;
+      padding: 12px;
+      text-align: left;
+    }
+
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #f3f4f6;
+      background-color: white;
+    }
+
+    tr:nth-child(even) td {
+      background-color: #f9fafb; // 条纹感
+    }
+
+    tr:hover td {
+      background-color: #f0fdf4; // 悬停变淡绿色
+    }
+  }
+
+  // 5. 图片美化
+  img {
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin: 1.5rem auto;
+    display: block;
+    border: 1px solid #eee;
+  }
+
+  // 6. 引用块美化
+  blockquote {
+    border-left: 4px solid #cbd5e1;
+    background-color: #f1f5f9;
+    color: #475569;
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+  }
+}
